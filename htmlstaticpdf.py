@@ -260,14 +260,3 @@ class Index():
 	def paralize(self, infodict):
 		tablediv = self.baseload(infodict)
 		self.myhtml.html_divpara(infodict.get('conclusion', ""), 'left')
-
-
-if __name__  == '__main__':
-	parser = argparse.ArgumentParser(description='Reading config and producing my html format module by pyh')
-	parser.add_argument('--config','-c', required=True, help='config file for html')
-	parser.add_argument('--out','-o', required=True, help='out html filename')
-	parser.add_argument('--limit','-l', required=False, help='limit table row number', default="")
-	args = parser.parse_args()
-	config = args.config
-	out = args.out
-	limit = args.limit
